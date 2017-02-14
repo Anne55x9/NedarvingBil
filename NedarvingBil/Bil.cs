@@ -8,9 +8,9 @@ namespace NedarvingBil
 {
     public abstract class Bil : IBil
     {
-        public int BilPrisExAfgift { get; private set; }
+        public int BilPrisExAfgift { get; set; }
 
-        public int KøbsÅr { get; private set; }
+        public int KøbsÅr { get; set; }
 
         public string Mærke { get; set; }
 
@@ -18,13 +18,6 @@ namespace NedarvingBil
 
         public int RegistreringsAfgift { get; set; }
 
-        //private int _registreringsAfgift;
-
-        //public int RegistreringsAfgift
-        //{
-        //    get { return _registreringsAfgift; }
-        //    set { _registreringsAfgift = value; }
-        //}
 
         /// <summary>
         /// ingen default ctor længere
@@ -52,7 +45,18 @@ namespace NedarvingBil
 
         public virtual int GetRegistreringsAfgift()
         {
+
+            if (BilPrisExAfgift <= 0)
+            {
+                throw new ArgumentException("BilPris må ikke være 0.");
+            }
+            if (KøbsÅr < 2014)
+            {
+                throw new ArgumentException("Købsåret er før 2014.");
+            }
+  
             RegistreringsAfgift = 0;
+          
             if (KøbsÅr <= 2014)
             {
                 if (BilPrisExAfgift <= 80500)
