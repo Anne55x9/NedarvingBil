@@ -152,7 +152,7 @@ namespace NedarvingBil.Tests
 
             Assert.AreEqual(85785, afgift);
 
-            // Assert.Fail();
+          
         }
 
         [TestMethod()]
@@ -169,9 +169,14 @@ namespace NedarvingBil.Tests
 
             Assert.AreEqual(85786,afgift);
 
-           // Assert.Fail();
+          
         }
 
         //Næste step er at lave tests på benzinbiler på samme facon som for dieselbilen.
+
+
+
+
+
     }
 }

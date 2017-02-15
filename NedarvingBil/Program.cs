@@ -148,7 +148,7 @@ namespace NedarvingBil
             //    }
             //}
 
-            DieselBil TestDB = new DieselBil("Blop", 0, 2010, "AD55333", 30, 5);
+            DieselBil TestDB = new DieselBil("Blop", 0, 2015, "AD55333", 30, 5);
 
             try
             {
@@ -156,14 +156,14 @@ namespace NedarvingBil
             }
             catch (ArgumentException e)
             {
-                
               Console.WriteLine(e);
             }
 
+            DieselBil TestDB1 = new DieselBil("Blap", 10000, 2010, "GF88720", 40, 7);
+
             try
             {
-               
-                Console.WriteLine(TestDB.KøbsÅr);
+                Console.WriteLine(TestDB1.GetRegistreringsAfgift());
             }
             catch (ArgumentException ae)
             {
