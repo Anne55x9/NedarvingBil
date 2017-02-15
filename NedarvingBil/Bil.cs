@@ -48,12 +48,14 @@ namespace NedarvingBil
 
             if (BilPrisExAfgift <= 0)
             {
-                throw new ArgumentException("BilPris må ikke være 0.");
+                throw new HalvÅrligEjerAfgiftException();
+                //throw new ArgumentException("BilPris må ikke være 0.");
             }
-            if (KøbsÅr < 2014)
-            {
-                throw new ArgumentException("Købsåret er før 2014.");
-            }
+            //if (KøbsÅr < 2014)
+            //{
+            //    throw new HalvÅrligEjerAfgiftException();
+            //    //throw new ArgumentException("Købsåret er før 2014.");
+            //}
   
             RegistreringsAfgift = 0;
           

@@ -174,7 +174,7 @@ namespace NedarvingBil.Tests
         //Test af Exception kast i registreringsafgift metoden.
 
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(HalvÅrligEjerAfgiftException))]
 
         public void GetRegistreringsAfgift_DieselBil2015_0cost()
         {
@@ -189,22 +189,20 @@ namespace NedarvingBil.Tests
             Assert.AreEqual(0, afgift);
         }
 
+        //[TestMethod()]
+        //[ExpectedException(typeof(HalvÅrligEjerAfgiftException))]
 
-        [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
+        //public void GetRegistreringsAfgift_DieselBil2010_5000cost()
+        //{
+        //    //arrange
+        //    DieselBil dieselbil = new DieselBil("RobinBil", 10000, 2010, "AD71700", 40, false, 5);
 
-        public void GetRegistreringsAfgift_DieselBil2010_5000cost()
-        {
-            //arrange
-            DieselBil dieselbil = new DieselBil("RobinBil", 10000, 2010, "AD71700", 40, false, 5);
+        //    //act
+        //    int afgift = dieselbil.GetRegistreringsAfgift();
 
-            //act
-            int afgift = dieselbil.GetRegistreringsAfgift();
-
-            //assert
-
-            Assert.AreEqual(5250, afgift);
-        }
+        //    //assert
+        //    Assert.AreEqual(5250, afgift);
+        //}
 
     }
 }
