@@ -161,5 +161,17 @@ namespace NedarvingBil.Tests
                 //Assert.Fail();
             }
 
+        [TestMethod()]
+        public void HalvÅrligEjerAfgift_Elbil_0()
+        {
+            //arrange 
+            ElBil elbil = new ElBil("Hunk", 100000, 2015, "HJ88333", 6, 10);
+
+            //act
+            int afgift = elbil.HalvÅrligEjerafgift();
+
+            Assert.AreEqual(0,afgift);
+        }
+
         }
 }

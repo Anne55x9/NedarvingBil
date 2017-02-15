@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfgiftTests", "AfgiftTests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfgiftTests_Elbil1", "AfgiftTests_Elbil1\AfgiftTests_Elbil1.csproj", "{05268756-A1FD-4A14-BFDB-096A6A155388}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjerAfgift_Dieselbil", "EjerAfgift_Dieselbil\EjerAfgift_Dieselbil.csproj", "{EDFE4C25-080F-4F6C-A75F-9F2E209D0481}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjerAfgift_BenzinBil", "EjerAfgift_BenzinBil\EjerAfgift_BenzinBil.csproj", "{07AE11A2-5E95-44FB-A54E-C58F6690A546}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{05268756-A1FD-4A14-BFDB-096A6A155388}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05268756-A1FD-4A14-BFDB-096A6A155388}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05268756-A1FD-4A14-BFDB-096A6A155388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDFE4C25-080F-4F6C-A75F-9F2E209D0481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDFE4C25-080F-4F6C-A75F-9F2E209D0481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDFE4C25-080F-4F6C-A75F-9F2E209D0481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDFE4C25-080F-4F6C-A75F-9F2E209D0481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07AE11A2-5E95-44FB-A54E-C58F6690A546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07AE11A2-5E95-44FB-A54E-C58F6690A546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07AE11A2-5E95-44FB-A54E-C58F6690A546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07AE11A2-5E95-44FB-A54E-C58F6690A546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

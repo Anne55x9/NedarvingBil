@@ -49,57 +49,17 @@ namespace NedarvingBil
                 afgift = 500;
 
             if (this.KmPrLiter < 15)
+
                 return afgift + 2000;
+
             else if (this.KmPrLiter > 25)
+
                 return afgift + 350;
+
             else
+
                 return afgift + 1000;
         }
-
-
-        //public override int HalvÅrligEjerafgift()
-        //{
-        //    int halveÅrsEjerAfgiftDb = 0;
-
-        //    if (Partikelfilter == true)
-        //    {
-        //        if (KmPrLiter < 15)
-        //        {
-        //            halveÅrsEjerAfgiftDb = 2000;
-        //        }
-
-        //        if (KmPrLiter == 15 && KmPrLiter <= 25)
-        //        {
-        //            halveÅrsEjerAfgiftDb = 1000;
-        //        }
-
-        //        if (KmPrLiter > 25)
-        //        {
-        //            halveÅrsEjerAfgiftDb = 350;
-        //        }
-        //    }
-  
-        //    else if (Partikelfilter == false)
-        //    {
-        //        if (KmPrLiter < 15)
-        //        {
-        //            halveÅrsEjerAfgiftDb = 2500;
-        //        }
-
-        //        if ((KmPrLiter == 15) && (KmPrLiter <= 25))
-        //        {
-        //            halveÅrsEjerAfgiftDb = 1500;
-        //        }
-
-        //        if (KmPrLiter > 25)
-        //        {
-        //            halveÅrsEjerAfgiftDb = 850;
-        //        }
-        //    }
-
-        //    return halveÅrsEjerAfgiftDb;
-        //}
-
 
         public override int GetRækkeVidde()
         {

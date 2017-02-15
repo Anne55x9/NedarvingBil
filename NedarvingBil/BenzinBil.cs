@@ -20,25 +20,19 @@ namespace NedarvingBil
         }
 
         public override int HalvÅrligEjerafgift()
-        {
-            int halveÅrsEjerAfgiftBb = 0;
+        { 
+            if (this.KmPrLiter < 20)
 
-            if (KmPrLiter < 20)
-            {
-                halveÅrsEjerAfgiftBb = 1200;
-            }
+                return 1200;
 
-            if ((KmPrLiter >= 20 ) && (KmPrLiter <= 28))
-            {
-                halveÅrsEjerAfgiftBb = 600;
-            }
+            else if (this.KmPrLiter > 28)
 
-            if (KmPrLiter > 28 ) 
-            {
-                halveÅrsEjerAfgiftBb = 320;
+                return 320;
+
+            else
+
+                return 600;
             }
-            return halveÅrsEjerAfgiftBb;
-        }
 
         public override int GetRækkeVidde()
         {
