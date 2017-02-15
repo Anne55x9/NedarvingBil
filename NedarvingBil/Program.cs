@@ -159,6 +159,8 @@ namespace NedarvingBil
               Console.WriteLine(e);
             }
 
+
+
             //DieselBil TestDB1 = new DieselBil("Blap", 10000, 2010, "GF88720", 40, 7);
 
             //try

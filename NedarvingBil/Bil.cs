@@ -71,7 +71,7 @@ namespace NedarvingBil
                     RegistreringsAfgift = RegistreringsAfgift + (BilPrisExAfgift - 80500) * 180/100;
                 }
             }
-            else 
+            else if (KøbsÅr > 2014 && KøbsÅr <= 2016)
             {
                 if (BilPrisExAfgift <= 81700)
                 {
@@ -83,7 +83,20 @@ namespace NedarvingBil
                     RegistreringsAfgift = RegistreringsAfgift + (BilPrisExAfgift - 81700) * 180 / 100;
                 }
             }
-                return RegistreringsAfgift;
+            else 
+            {
+                if (BilPrisExAfgift <= 106600)
+                {
+                    RegistreringsAfgift = BilPrisExAfgift * 105 / 100;
+                }
+                else if (BilPrisExAfgift > 106600)
+                {
+                    RegistreringsAfgift = 106600 * 105 / 100;
+                    RegistreringsAfgift = RegistreringsAfgift + (BilPrisExAfgift - 106600) * 150 / 100;
+                }
+
+            }
+            return RegistreringsAfgift;
         }
 
         public int TotalPris()
