@@ -151,8 +151,6 @@ namespace NedarvingBil.Tests
             //assert
 
             Assert.AreEqual(85785, afgift);
-
-          
         }
 
         [TestMethod()]
@@ -168,15 +166,45 @@ namespace NedarvingBil.Tests
             //assert
 
             Assert.AreEqual(85786,afgift);
-
-          
         }
 
         //Næste step er at lave tests på benzinbiler på samme facon som for dieselbilen.
 
 
+        //Test af Exception kast i registreringsafgift metoden.
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+
+        public void GetRegistreringsAfgift_DieselBil2015_0cost()
+        {
+            //arrange
+            DieselBil dieselbil = new DieselBil("RobinBil", 0, 2015, "AD71700", 40, false, 5);
+
+            //act
+            int afgift = dieselbil.GetRegistreringsAfgift();
+
+            //assert
+
+            Assert.AreEqual(0, afgift);
+        }
 
 
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+
+        public void GetRegistreringsAfgift_DieselBil2010_5000cost()
+        {
+            //arrange
+            DieselBil dieselbil = new DieselBil("RobinBil", 10000, 2010, "AD71700", 40, false, 5);
+
+            //act
+            int afgift = dieselbil.GetRegistreringsAfgift();
+
+            //assert
+
+            Assert.AreEqual(5250, afgift);
+        }
 
     }
 }
