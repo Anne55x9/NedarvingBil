@@ -38,7 +38,20 @@ namespace NedarvingBil
 
             foreach (DieselBil db in dbList)
             {
-                Console.WriteLine($"Den halvårige ejer afgift er: {db.HalvÅrligEjerafgift()} og afgiften er: {db.GetRegistreringsAfgift()} kr og rækkevidden er: {db.GetRækkeVidde()}");
+                StringBuilder udskrift = new StringBuilder();
+                udskrift.Append($"Den halvårige ejer afgift er:  {db.HalvÅrligEjerafgift()} og rækkevidden er: {db.GetRækkeVidde()}. Afgiften er: ");
+                try
+                {
+                    udskrift.Append(db.GetRegistreringsAfgift());
+                }
+                catch (Exception)
+                {
+                    udskrift.Append("\"ingen data\"");
+                }
+
+                Console.WriteLine(udskrift);
+
+                //Console.WriteLine($"Den halvårige ejer afgift er: {db.HalvÅrligEjerafgift()} og afgiften er: {db.GetRegistreringsAfgift()} kr og rækkevidden er: {db.GetRækkeVidde()}");
             }
 
             List<BenzinBil> bbList = new List<BenzinBil>();
@@ -62,7 +75,20 @@ namespace NedarvingBil
 
             foreach (BenzinBil bb in bbList)
             {
-                Console.WriteLine($"Den halvårige ejer afgift er: {bb.HalvÅrligEjerafgift()} og afgiften er: {bb.GetRegistreringsAfgift()} kr og rækkevidden er: {bb.GetRækkeVidde()}");
+                StringBuilder udskrift = new StringBuilder();
+                udskrift.Append($"Den halvårige ejer afgift er:  {bb.HalvÅrligEjerafgift()} og rækkevidden er: {bb.GetRækkeVidde()}. Afgiften er: ");
+                try
+                {
+                    udskrift.Append(bb.GetRegistreringsAfgift());
+                }
+                catch (Exception)
+                {
+                    udskrift.Append("\"ingen data\"");
+                }
+
+                Console.WriteLine(udskrift);
+
+                //Console.WriteLine($"Den halvårige ejer afgift er: {bb.HalvÅrligEjerafgift()} og afgiften er: {bb.GetRegistreringsAfgift()} kr og rækkevidden er: {bb.GetRækkeVidde()}");
             }
 
             List<ElBil> ebList = new List<ElBil>();
@@ -86,7 +112,21 @@ namespace NedarvingBil
 
             foreach (ElBil eb in ebList)
             {
-                Console.WriteLine($"Den halvårige ejer afgift er: {eb.HalvÅrligEjerafgift()} og afgiften er: {eb.GetRegistreringsAfgift()} kr og rækkevidden er: {eb.GetRækkeVidde()}");
+
+                StringBuilder udskrift = new StringBuilder();
+                udskrift.Append($"Den halvårige ejer afgift er:  {eb.HalvÅrligEjerafgift()} og rækkevidden er: {eb.GetRækkeVidde()}. Afgiften er: ");
+                try
+                {
+                    udskrift.Append(eb.GetRegistreringsAfgift());
+                }
+                catch (Exception)
+                {
+                    udskrift.Append("\"ingen data\"");
+                }
+
+                Console.WriteLine(udskrift);
+
+                //Console.WriteLine($"Den halvårige ejer afgift er: {eb.HalvÅrligEjerafgift()} og afgiften er: {eb.GetRegistreringsAfgift()} kr og rækkevidden er: {eb.GetRækkeVidde()}");
             }
 
             List<IBil> bilListePol = new List<IBil>();
@@ -127,7 +167,21 @@ namespace NedarvingBil
                     DieselBil dieselbil1 = bil as DieselBil;
                     Console.WriteLine(dieselbil1.HvilkenBilErJeg());
                     Console.WriteLine(dieselbil1);
-                    Console.WriteLine($"Den halvårige ejer afgift er: {dieselbil1.HalvÅrligEjerafgift()} og afgiften er: {dieselbil1.GetRegistreringsAfgift()} kr og rækkevidden er: {dieselbil1.GetRækkeVidde()}");
+
+                    StringBuilder udskrift = new StringBuilder();
+                    udskrift.Append($"Den halvårige ejer afgift er:  {dieselbil1.HalvÅrligEjerafgift()} og rækkevidden er: {dieselbil1.GetRækkeVidde()}. Afgiften er: ");
+                    try
+                    {
+                        udskrift.Append(dieselbil1.GetRegistreringsAfgift());
+                    }
+                    catch (Exception)
+                    {
+                        udskrift.Append("\"ingen data\"");
+                    }
+
+                    Console.WriteLine(udskrift);
+
+                    //Console.WriteLine($"Den halvårige ejer afgift er: {dieselbil1.HalvÅrligEjerafgift()} og afgiften er: {dieselbil1.GetRegistreringsAfgift()} kr og rækkevidden er: {dieselbil1.GetRækkeVidde()}");
                 }
 
                 else if (bil is BenzinBil)
@@ -136,7 +190,21 @@ namespace NedarvingBil
                     BenzinBil benzinbil1 = bil as BenzinBil;
                     Console.WriteLine(benzinbil1.HvilkenBilErJeg());
                     Console.WriteLine(benzinbil1);
-                    Console.WriteLine($"Den halvårige ejer afgift er: {benzinbil1.HalvÅrligEjerafgift()} og afgiften er: {benzinbil1.GetRegistreringsAfgift()} kr og rækkevidden er: {benzinbil1.GetRækkeVidde()}");
+
+                    StringBuilder udskrift = new StringBuilder();
+                    udskrift.Append($"Den halvårige ejer afgift er:  {benzinbil1.HalvÅrligEjerafgift()} og rækkevidden er: {benzinbil1.GetRækkeVidde()}. Afgiften er: ");
+                    try
+                    {
+                        udskrift.Append(benzinbil1.GetRegistreringsAfgift());
+                    }
+                    catch (Exception)
+                    {
+                        udskrift.Append("\"ingen data\"");
+                    }
+
+                    Console.WriteLine(udskrift);
+
+                    //Console.WriteLine($"Den halvårige ejer afgift er: {benzinbil1.HalvÅrligEjerafgift()} og afgiften er: {benzinbil1.GetRegistreringsAfgift()} kr og rækkevidden er: {benzinbil1.GetRækkeVidde()}");
                 }
 
                 else if (bil is ElBil)
@@ -144,9 +212,28 @@ namespace NedarvingBil
                     ElBil elbil1 = bil as ElBil;
                     Console.WriteLine(elbil1.HvilkenBilErJeg());
                     Console.WriteLine(elbil1);
-                    Console.WriteLine($"Den halvårige ejer afgift er: {elbil1.HalvÅrligEjerafgift()} og afgiften er: {elbil1.GetRegistreringsAfgift()} kr. Rækkevidden er: {elbil1.GetRækkeVidde()} og dens elmoter har en ladetid på {elbil1.GetLadeTid()} min.");
+
+                    StringBuilder udskrift = new StringBuilder();
+                    udskrift.Append($"Den halvårige ejer afgift er:  {elbil1.HalvÅrligEjerafgift()} og rækkevidden er: {elbil1.GetRækkeVidde()}. Dens elmoter har en ladetid på {elbil1.GetLadeTid()} min og afgiften er: ");
+                    try
+                    {
+                        udskrift.Append(elbil1.GetRegistreringsAfgift());
+                    }
+                    catch (Exception)
+                    {
+                        udskrift.Append("\"ingen data\"");
+                    }
+
+                    Console.WriteLine(udskrift);
+
+                    //Console.WriteLine($"Den halvårige ejer afgift er: {elbil1.HalvÅrligEjerafgift()} og afgiften er: {elbil1.GetRegistreringsAfgift()} kr. Rækkevidden er: {elbil1.GetRækkeVidde()} og dens elmoter har en ladetid på {elbil1.GetLadeTid()} min.");
                 }
             }
+
+
+            //Tester her om min HalvårligEjerAfgiftExceptions bliver handlet:
+
+            Console.WriteLine("Tester her om min HalvårligEjerAfgiftExceptions bliver handlet:");
 
             DieselBil TestDB = new DieselBil("Blop", 0, 2015, "AD55333", 30, 5);
 
@@ -156,28 +243,28 @@ namespace NedarvingBil
             }
             catch (HalvÅrligEjerAfgiftException e)
             {
-              Console.WriteLine(e);
+                Console.WriteLine(e);
             }
 
 
 
-            //DieselBil TestDB1 = new DieselBil("Blap", 10000, 2010, "GF88720", 40, 7);
+            DieselBil TestDB1 = new DieselBil("Blap", 10000, 2010, "GF88720", 40, 7);
 
-            //try
-            //{
-            //    Console.WriteLine(TestDB1.GetRegistreringsAfgift());
-            //}
-            //catch (HalvÅrligEjerAfgiftException ae)
-            //{
+            try
+            {
 
-            //    Console.WriteLine(ae);
-            //}
+                Console.WriteLine(TestDB1.GetRegistreringsAfgift());
+            }
+            catch (HalvÅrligEjerAfgiftException ae)
+            {
+
+                Console.WriteLine(ae);
+            }
+
+
 
             Console.ReadLine();
+
         }
-
-     
-
-     
     }
 }

@@ -9,7 +9,7 @@ namespace NedarvingBil
     public class HalvÅrligEjerAfgiftException : Exception
     {
 
-        const string text = "HalvÅrligEjerafgift er forkert,Km/l er mindre end 5 km/l ";
+        const string text = "Bilprisen <= 0 eller købsåret er før 2014 ";
 
         public HalvÅrligEjerAfgiftException()
         : this(text)

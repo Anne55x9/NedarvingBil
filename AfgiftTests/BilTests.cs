@@ -88,23 +88,6 @@ namespace NedarvingBil.Tests
         }
 
         [TestMethod()]
-        public void GetRegistreringsAfgiftTest_DieselBil2015_100000cost()
-        {
-            //arrange
-            DieselBil dieselbil = new DieselBil("Tesla", 100000, 2015, "DD77380", 60, true, 10);
-
-            //act
-
-            int afgift = dieselbil.GetRegistreringsAfgift();
-
-            //assert
-
-            Assert.AreEqual(118725, afgift);
-
-            // Assert.Fail();
-        }
-
-        [TestMethod()]
         public void GetRegistreringsAfgiftTest_DieselBil2015_5000cost()
         {
             //arrange
@@ -168,6 +151,23 @@ namespace NedarvingBil.Tests
             Assert.AreEqual(85786,afgift);
         }
 
+        [TestMethod()]
+        public void GetRegistreringsAfgiftTest_DieselBil2015_100000cost()
+        {
+            //arrange
+            DieselBil dieselbil = new DieselBil("Tesla", 100000, 2015, "DD77380", 60, true, 10);
+
+            //act
+
+            int afgift = dieselbil.GetRegistreringsAfgift();
+
+            //assert
+
+            Assert.AreEqual(118725, afgift);
+
+            // Assert.Fail();
+        }
+
         //Næste step er at lave tests på benzinbiler på samme facon som for dieselbilen.
 
 
@@ -186,23 +186,23 @@ namespace NedarvingBil.Tests
 
             //assert
 
-           // Assert.AreEqual(0, afgift);
+           //Assert.AreEqual(0, afgift);
         }
 
-        //[TestMethod()]
-        //[ExpectedException(typeof(HalvÅrligEjerAfgiftException))]
+        [TestMethod()]
+        [ExpectedException(typeof(HalvÅrligEjerAfgiftException))]
 
-        //public void GetRegistreringsAfgift_DieselBil2010_5000cost()
-        //{
-        //    //arrange
-        //    DieselBil dieselbil = new DieselBil("RobinBil", 10000, 2010, "AD71700", 40, false, 5);
+        public void GetRegistreringsAfgift_DieselBil2010_5000cost()
+        {
+            //arrange
+            DieselBil dieselbil = new DieselBil("RobinBil", 10000, 2010, "AD71700", 40, false, 5);
 
-        //    //act
-        //    int afgift = dieselbil.GetRegistreringsAfgift();
+            //act
+            int afgift = dieselbil.GetRegistreringsAfgift();
 
-        //    //assert
-        //   // Assert.AreEqual(5250, afgift);
-        //}
+            //assert
+            // Assert.AreEqual(5250, afgift);
+        }
 
 
 
